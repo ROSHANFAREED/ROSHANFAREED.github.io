@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Roshan Fareed — Data Engineer Portfolio</title>
-  <meta name="description" content="Roshan Fareed — Data Engineer | PySpark · Databricks · Power BI. Portfolio showcasing Medallion architecture project, Uber analytics dashboard and more." />
+  <meta name="description" content="Portfolio of Roshan Fareed — Data Engineer | PySpark · Databricks · Power BI. Showcasing Medallion Architecture project, Uber analytics dashboard, and more." />
   <style>
     :root{--accent:#1167b1;--muted:#6b7280;--bg:#f7f9fb;--card:#ffffff}
     *{box-sizing:border-box}
@@ -29,17 +29,22 @@
     .project h3{margin:0;font-size:16px}
     .project p{margin:6px 0 0;color:var(--muted);font-size:14px}
     .meta{margin-top:10px;color:var(--muted);font-size:13px}
-    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+    footer{text-align:center;margin-top:28px;color:var(--muted);font-size:13px}
     .link-row{display:flex;gap:10px;flex-wrap:wrap}
     .small{font-size:13px;color:var(--muted)}
-    @media(max-width:880px){.columns{grid-template-columns:1fr}.top-actions{margin-left:0}}
-    /* project badges */
-    .badge{display:inline-block;background:#f1f5f9;padding:6px 8px;border-radius:6px;font-weight:700;color:#0f172a;margin-right:8px;font-size:12px}
-    .contact-list{display:flex;flex-direction:column;gap:8px}
-    .contact-item{display:flex;gap:8px;align-items:center}
     .hr{height:1px;background:#eef2f7;margin:12px 0;border-radius:2px}
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    @media(max-width:880px){
+      .columns{grid-template-columns:1fr}
+      .top-actions{margin-left:0}
+    }
   </style>
 </head>
+
 <body>
   <div class="container">
     <header>
@@ -52,51 +57,59 @@
       <div class="top-actions">
         <a class="btn" href="assets/resume/ROSHAN_FAREED_Resume.pdf" download>Download Resume</a>
         <a class="btn ghost" href="https://github.com/ROSHANFAREED" target="_blank">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/roshan-fareed53" target="_blank">LinkedIn</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/roshanfareed53" target="_blank">LinkedIn</a>
       </div>
     </header>
 
-    <p class="lead">Data engineer with hands‑on experience building end‑to‑end ETL pipelines, cleaning and transforming large datasets using PySpark on Databricks, and delivering business dashboards in Power BI. Focused on reliability, reproducibility and clear data storytelling.</p>
+    <p class="lead">
+      Data engineer with hands-on experience building end-to-end ETL pipelines, cleaning and transforming large datasets using PySpark on Databricks, and delivering business dashboards in Power BI.
+    </p>
 
     <div class="summary card">
-      <strong>Snapshot:</strong> Built 10+ data engineering & analytics projects including a Databricks Medallion architecture pipeline (CSV + JSON → Bronze/Silver/Gold) and a Power BI Uber Rides Dashboard. Key KPIs: Average Order Value (AOV) and Average Price per Item implemented in Gold layer.
+      <strong>Snapshot:</strong> Built 10+ data engineering & analytics projects including a Databricks Medallion architecture pipeline (CSV + JSON → Bronze/Silver/Gold) and a Power BI Uber Rides Dashboard. KPIs include AOV and Avg Price per Item.
     </div>
 
     <div class="columns">
       <main>
-        <section class="card">
+
+        <!-- Projects Section -->
+        <section id="projects" class="card">
           <h2 style="margin-top:0">Projects</h2>
+
           <div class="projects">
 
+            <!-- Project 1 -->
             <article class="project">
               <img src="assets/images/medallion_dashboard.png" alt="Medallion dashboard screenshot" />
               <div>
                 <h3>Retail Sales Data Engineering Pipeline (Databricks)</h3>
-                <p>End‑to‑end Medallion architecture: Bronze ingest (CSV + JSON) → Silver cleaning & PySpark transforms → Gold aggregates (AOV, Avg Price per Item) → Dashboard. Implemented incremental Delta merges and schema enforcement.</p>
+                <p>End-to-end Medallion architecture using PySpark & Delta Lake. Bronze ingest → Silver cleaning → Gold aggregates (AOV, Avg Price per Item) → Dashboard creation.</p>
                 <div class="meta link-row">
-                  <a class="small" href="https://github.com/ROSHANFAREED/medallion-databricks-project" target="_blank">GitHub Repo</a>
+                  <a class="small" href="https://github.com/ROSHANFAREED" target="_blank">GitHub Repo</a>
                   <span class="small">• Databricks Free Edition</span>
                 </div>
               </div>
             </article>
 
+            <!-- Project 2 -->
             <article class="project">
               <img src="assets/images/uber_dashboard.png" alt="Uber dashboard screenshot" />
               <div>
                 <h3>Uber Rides Analytics Dashboard (Power BI)</h3>
-                <p>Power BI dashboard analyzing 149K rides (2024). Delivered KPIs: Total Bookings (149K), Revenue ($51M), Avg Customer Rating (4.40), Payment method distribution and peak hour analysis.</p>
+                <p>Analyzed 149K Uber rides using Power BI. Delivered KPIs including Total Bookings, Revenue ($51M), Avg Rating (4.40), payment distribution & peak demand patterns.</p>
                 <div class="meta link-row">
-                  <a class="small" href="https://github.com/ROSHANFAREED/uber-rides-analysis" target="_blank">GitHub Repo</a>
-                  <span class="small">• Power BI | DAX | Power Query</span>
+                  <a class="small" href="https://github.com/ROSHANFAREED" target="_blank">GitHub Repo</a>
+                  <span class="small">• Power BI | DAX</span>
                 </div>
               </div>
             </article>
 
+            <!-- Project 3 -->
             <article class="project">
-              <img src="assets/images/other_project.png" alt="other project" />
+              <img src="assets/images/other_project.png" alt="Other project screenshot" />
               <div>
                 <h3>Other Notable Projects</h3>
-                <p>10+ projects including data validation, SQL practice sets, EDA notebooks and dashboards. See full list on GitHub; includes small datasets and runnable notebooks.</p>
+                <p>10+ additional projects including SQL analytics, Power BI dashboards, and PySpark-based processing pipelines.</p>
                 <div class="meta link-row">
                   <a class="small" href="https://github.com/ROSHANFAREED" target="_blank">All Projects</a>
                 </div>
@@ -106,24 +119,20 @@
           </div>
         </section>
 
-        <section style="margin-top:18px" class="card">
-          <h2 style="margin-top:0">Selected Achievements</h2>
+        <section class="card" style="margin-top:18px">
+          <h2 style="margin-top:0">Achievements</h2>
           <ul style="margin:10px 0 0 18px;color:var(--muted)">
-            <li>Completed 10+ end-to-end data engineering projects showcasing ETL pipelines, PySpark transforms, and dashboarding.</li>
-            <li>Automated reporting workflows and reduced manual effort via Python and PySpark scripts.</li>
-            <li>Improved quality control in manufacturing by deriving data-driven insights (15% defect reduction).</li>
+            <li>Completed 10+ end-to-end data engineering projects.</li>
+            <li>Automated reporting workflows using Python & SQL.</li>
+            <li>Reduced defects by 15% in manufacturing through data insights.</li>
           </ul>
-        </section>
-
-        <section style="margin-top:18px" class="card">
-          <h2 style="margin-top:0">How to run / Notes</h2>
-          <p class="small" style="margin:8px 0 0;color:var(--muted)">For Databricks project: import notebooks (File → Import) or run exported .ipynb/.py files. Place sample data in <code>data_sample/</code>. For Power BI project: open the <code>.pbix</code> file in Power BI Desktop and refresh data.</p>
         </section>
 
       </main>
 
+      <!-- Sidebar Right -->
       <aside>
-        <div class="card">
+        <div class="card" id="contact">
           <h3 style="margin-top:0">Core Skills</h3>
           <div class="skills" style="margin-top:8px">
             <span class="skill">PySpark</span>
@@ -141,13 +150,17 @@
           <div class="contact-list">
             <div class="contact-item"><strong>Email:</strong>&nbsp;<span class="small">roshanfareed53@gmail.com</span></div>
             <div class="contact-item"><strong>Location:</strong>&nbsp;<span class="small">Ramanathapuram, Tamil Nadu</span></div>
-            <div class="contact-item"><strong>LinkedIn:</strong>&nbsp;<a class="small" href="https://www.linkedin.com/in/roshan-fareed53" target="_blank">linkedin.com/in/roshan-fareed53</a></div>
-            <div class="contact-item"><strong>GitHub:</strong>&nbsp;<a class="small" href="https://github.com/ROSHANFAREED" target="_blank">github.com/ROSHANFAREED</a></div>
+            <div class="contact-item"><strong>LinkedIn:</strong>&nbsp;
+              <a class="small" href="https://www.linkedin.com/in/roshanfareed53" target="_blank">linkedin.com/in/roshanfareed53</a>
+            </div>
+            <div class="contact-item"><strong>GitHub:</strong>&nbsp;
+              <a class="small" href="https://github.com/ROSHANFAREED" target="_blank">github.com/ROSHANFAREED</a>
+            </div>
           </div>
 
           <div class="hr"></div>
 
-          <h3 style="margin-top:0">Quick Links</h3>
+          <h3>Quick Links</h3>
           <div class="link-row" style="margin-top:8px">
             <a class="small" href="#projects">Projects</a>
             <a class="small" href="#contact">Contact</a>
@@ -158,8 +171,9 @@
     </div>
 
     <footer>
-      <div class="small">Made with ❤️ • Last updated: Dec 2025 • <a href="https://github.com/ROSHANFAREED/ROSHANFAREED.github.io" target="_blank">Source</a></div>
+      <div class="small">Made with ❤️ • Last updated: Dec 2025</div>
     </footer>
+
   </div>
 </body>
 </html>
