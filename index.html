@@ -51,10 +51,7 @@
       font-size:28px;
     }
 
-    h1{
-      margin:0;
-      font-size:28px;
-    }
+    h1{margin:0;font-size:28px}
 
     .title{
       color:var(--muted);
@@ -97,10 +94,7 @@
       box-shadow:0 6px 18px rgba(8,15,29,0.05);
     }
 
-    .summary{
-      margin-top:12px;
-      font-size:14.5px;
-    }
+    .summary{margin-top:12px;font-size:14.5px}
 
     .columns{
       display:grid;
@@ -109,10 +103,7 @@
       margin-top:22px;
     }
 
-    .projects{
-      display:grid;
-      gap:18px;
-    }
+    .projects{display:grid;gap:18px}
 
     .project{
       display:flex;
@@ -126,13 +117,11 @@
       object-fit:cover;
       border-radius:10px;
       box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      cursor:zoom-in;
       flex-shrink:0;
     }
 
-    .project h3{
-      margin:0;
-      font-size:16.5px;
-    }
+    .project h3{margin:0;font-size:16.5px}
 
     .project p{
       margin:6px 0 0;
@@ -140,17 +129,9 @@
       font-size:14px;
     }
 
-    .meta{
-      margin-top:10px;
-      font-size:13px;
-      color:var(--muted);
-    }
+    .meta{margin-top:10px;font-size:13px;color:var(--muted)}
 
-    .link-row{
-      display:flex;
-      gap:10px;
-      flex-wrap:wrap;
-    }
+    .link-row{display:flex;gap:10px;flex-wrap:wrap}
 
     .skills{
       display:flex;
@@ -182,6 +163,29 @@
       color:var(--muted);
     }
 
+    /* Image Modal */
+    .modal{
+      display:none;
+      position:fixed;
+      z-index:999;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.85);
+      align-items:center;
+      justify-content:center;
+      padding:20px;
+    }
+
+    .modal img{
+      max-width:90%;
+      max-height:90%;
+      border-radius:12px;
+      background:#fff;
+      box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    }
+
     html{scroll-behavior:smooth}
 
     @media(max-width:900px){
@@ -211,17 +215,15 @@
     </div>
   </header>
 
-  <!-- INTRO -->
   <p class="lead">
-    Azure-focused data engineer with hands-on experience building end-to-end ETL pipelines using
-    Azure Data Factory, Databricks (PySpark), ADLS Gen2, Azure SQL, and Power BI.
+    Azure-focused data engineer with hands-on experience building end-to-end ETL pipelines
+    using Azure Data Factory, Databricks (PySpark), ADLS Gen2, Azure SQL, and Power BI.
   </p>
 
   <div class="card summary">
     <strong>Snapshot:</strong>
-    Built production-style Azure data engineering pipelines, including a full end-to-end
-    COVID-19 analytics platform and Databricks Medallion architecture projects, with
-    secure coding and analytics-ready data models.
+    Built production-style Azure data engineering pipelines including a full end-to-end
+    COVID-19 analytics platform and Databricks Medallion architecture projects.
   </div>
 
   <div class="columns">
@@ -229,21 +231,21 @@
     <!-- MAIN -->
     <main>
 
-      <!-- PROJECTS -->
       <section id="projects" class="card">
         <h2 style="margin-top:0">Projects</h2>
 
         <div class="projects">
 
-          <!-- FLAGSHIP PROJECT -->
+          <!-- FLAGSHIP -->
           <article class="project">
-            <img src="assets/images/covid19_architecture.png" alt="COVID-19 Azure Data Engineering Architecture" />
+            <img src="assets/images/covid19_architecture.png"
+                 alt="COVID-19 Azure Architecture"
+                 onclick="openModal(this.src)" />
             <div>
               <h3>COVID-19 Azure Data Engineering Pipeline <span style="color:#2563eb">(Flagship)</span></h3>
               <p>
-                Designed and implemented an end-to-end Azure data pipeline ingesting public COVID-19 datasets
-                using Azure Data Factory, transforming data via ADF Mapping Data Flows and Databricks (PySpark),
-                storing curated data in ADLS Gen2, and serving analytics through Azure SQL and Power BI dashboards.
+                End-to-end Azure pipeline using ADF, Databricks (PySpark), ADLS Gen2, Azure SQL,
+                and Power BI to ingest, transform, and visualize public COVID-19 datasets.
               </p>
               <div class="meta link-row">
                 <a href="https://github.com/ROSHANFAREED/covid19-data-engineering" target="_blank">GitHub Repo</a>
@@ -254,13 +256,14 @@
 
           <!-- PROJECT 2 -->
           <article class="project">
-            <img src="assets/images/medallion_dashboard.png" alt="Databricks Medallion Architecture Dashboard" />
+            <img src="assets/images/medallion_dashboard.png"
+                 alt="Medallion Architecture Dashboard"
+                 onclick="openModal(this.src)" />
             <div>
               <h3>Retail Sales Data Engineering Pipeline (Databricks)</h3>
               <p>
-                Built a Medallion architecture (Bronze–Silver–Gold) pipeline using PySpark and Delta Lake.
-                Implemented schema enforcement, data quality checks, and analytical aggregates
-                such as AOV and category-level revenue insights.
+                Medallion architecture (Bronze–Silver–Gold) built using PySpark and Delta Lake
+                with analytical aggregates and Power BI reporting.
               </p>
               <div class="meta link-row">
                 <a href="https://github.com/ROSHANFAREED" target="_blank">GitHub Repo</a>
@@ -271,13 +274,14 @@
 
           <!-- PROJECT 3 -->
           <article class="project">
-            <img src="assets/images/uber_dashboard.png" alt="Uber Rides Power BI Dashboard" />
+            <img src="assets/images/uber_dashboard.png"
+                 alt="Uber Analytics Dashboard"
+                 onclick="openModal(this.src)" />
             <div>
               <h3>Uber Rides Analytics Dashboard (Power BI)</h3>
               <p>
-                Analyzed 149K Uber ride records using Power BI and DAX.
-                Delivered KPIs such as total bookings, revenue ($51M),
-                average ratings, payment trends, and peak demand hours.
+                Power BI analytics on 149K Uber rides delivering revenue, demand patterns,
+                and customer insights using DAX.
               </p>
               <div class="meta link-row">
                 <a href="https://github.com/ROSHANFAREED" target="_blank">GitHub Repo</a>
@@ -288,37 +292,28 @@
 
           <!-- PROJECT 4 -->
           <article class="project">
-            <img src="assets/images/other_project.png" alt="Other Data Engineering Projects" />
+            <img src="assets/images/other_project.png"
+                 alt="Other Projects"
+                 onclick="openModal(this.src)" />
             <div>
               <h3>Other Notable Projects</h3>
               <p>
-                Additional projects covering SQL analytics, Power BI dashboards,
-                and PySpark-based data transformations.
+                Additional projects across SQL analytics, Power BI dashboards,
+                and PySpark data transformations.
               </p>
               <div class="meta link-row">
-                <a href="https://github.com/ROSHANFAREED?tab=repositories" target="_blank">View All Projects</a>
+                <a href="https://github.com/ROSHANFAREED?tab=repositories" target="_blank">View All</a>
               </div>
             </div>
           </article>
 
         </div>
       </section>
-
-      <!-- ACHIEVEMENTS -->
-      <section class="card" style="margin-top:20px">
-        <h2 style="margin-top:0">Achievements</h2>
-        <ul style="margin:10px 0 0 18px;color:var(--muted)">
-          <li>Completed end-to-end data engineering and analytics projects.</li>
-          <li>Built production-style Azure pipelines with secure credential handling.</li>
-          <li>Reduced reporting and quality issues through data-driven insights.</li>
-        </ul>
-      </section>
-
     </main>
 
     <!-- SIDEBAR -->
     <aside>
-      <div class="card" id="contact">
+      <div class="card">
         <h3 style="margin-top:0">Core Skills</h3>
         <div class="skills">
           <span class="skill">Azure Data Factory</span>
@@ -336,33 +331,16 @@
         <h3>Contact</h3>
         <div class="small"><strong>Email:</strong> roshanfareed53@gmail.com</div>
         <div class="small"><strong>Location:</strong> Ramanathapuram, Tamil Nadu</div>
-        <div class="small">
-          <strong>LinkedIn:</strong>
-          <a href="https://www.linkedin.com/in/roshanfareed53" target="_blank">linkedin.com/in/roshanfareed53</a>
-        </div>
-        <div class="small">
-          <strong>GitHub:</strong>
-          <a href="https://github.com/ROSHANFAREED" target="_blank">github.com/ROSHANFAREED</a>
-        </div>
-
-        <div class="hr"></div>
-
-        <div class="link-row">
-          <a class="small" href="#projects">Projects</a>
-          <a class="small" href="#contact">Contact</a>
-        </div>
       </div>
     </aside>
 
   </div>
 
-  <!-- HIRE ME -->
   <section class="card" style="margin-top:26px;text-align:center">
     <h2 style="margin-top:0">Hire Me</h2>
     <p style="max-width:640px;margin:0 auto;color:#4b5563;font-size:15px">
       Actively seeking opportunities as a <strong>Data Engineer / Data Analyst</strong>.
-      Immediate joiner, open to relocation within Tamil Nadu.
-      Passionate about building scalable pipelines and analytics-ready data platforms.
+      Immediate joiner, open to relocation.
     </p>
 
     <div style="margin-top:18px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap">
@@ -377,5 +355,30 @@
   </footer>
 
 </div>
+
+<!-- Image Modal -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <img id="modalImg" />
+</div>
+
+<script>
+  function openModal(src){
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    modalImg.src = src;
+    modal.style.display = "flex";
+  }
+
+  function closeModal(){
+    document.getElementById("imgModal").style.display = "none";
+  }
+
+  document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+      closeModal();
+    }
+  });
+</script>
+
 </body>
 </html>
